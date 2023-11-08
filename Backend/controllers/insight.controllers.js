@@ -61,7 +61,8 @@ const addInsighttoDb = async(req,res)=>{
         
         res.status(200).send(urldata)
     } catch (error) {
-        console.log(error.message)
+        console.log('/insight/: ', error.message);
+        res.status(501).send({ msg: "Internal Server error", error: error.message });
     }
 }
 
@@ -72,7 +73,8 @@ const getAllInsight = async(req,res)=>{
 
         res.status(200).send(allInsight)
     } catch (error) {
-        console.log(error.message)
+        console.log('/insight/getallinsight: ', error.message);
+        res.status(501).send({ msg: "Internal Server error", error: error.message });
     }
 }
 
@@ -82,7 +84,8 @@ const getAllFav = async(req,res)=>{
 
         res.status(200).send(allInsight)
     } catch (error) {
-        console.log(error.message)
+        console.log('/insight/fav: ', error.message);
+        res.status(501).send({ msg: "Internal Server error", error: error.message });
     }
 }
 
@@ -93,7 +96,8 @@ const addToFav = async(req,res)=>{
         await InsightModel.findByIdAndUpdate({ _id: insightId }, payload);
         res.status(200).send({msg:"Added to favorite!"})
     } catch (error) {
-        console.log(error.message)
+        console.log('/insight/addtofav/:insightId: ', error.message);
+        res.status(501).send({ msg: "Internal Server error", error: error.message });
     }
 }
 
@@ -103,7 +107,8 @@ const deleteInsight = async(req,res)=>{
         await InsightModel.findByIdAndDelete({ _id: insightId });
         res.status(200).send({msg:"Insight Deleted Sucessfully"})
     } catch (error) {
-        console.log(error.message)
+        console.log('/insight/delete/:insightIdd: ', error.message);
+        res.status(501).send({ msg: "Internal Server error", error: error.message });
     }
 }
 module.exports={

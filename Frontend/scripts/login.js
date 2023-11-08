@@ -16,7 +16,7 @@ function toggleSignup(){
      document.getElementById("login-form").style.display="block";
  }
 
-
+ const BaseServerUrl = "http://localhost:8080";
 
 
  const loginBtn = document.getElementById("lgbtn");
@@ -37,7 +37,7 @@ function toggleSignup(){
 
 
  loginBtn.addEventListener('click',()=>{
-    fetch(`http://localhost:8080/user/login`,{
+    fetch(`${BaseServerUrl}/user/login`,{
         method:"POST",
         headers:{
             "Content-Type":"application/json"
@@ -75,7 +75,7 @@ function toggleSignup(){
  signupBtn.addEventListener('click',()=>{
 
     
-    fetch(`http://localhost:8080/user/register`,{
+    fetch(`${BaseServerUrl}/user/register`,{
         method:"POST",
         headers:{
             "Content-Type":"application/json"

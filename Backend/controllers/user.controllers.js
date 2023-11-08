@@ -28,7 +28,7 @@ const register = async (req, res) => {
 
     res.status(201).send({ ok: true, msg: "User Registration Successful"})
   } catch (error) {
-    console.log('/user/register: ', err.message);
+    console.log('/user/register: ', error.message);
     res.status(501).send({ msg: "Internal Server error", error: error.message });
   }
 }
