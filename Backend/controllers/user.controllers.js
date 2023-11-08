@@ -26,7 +26,7 @@ const register = async (req, res) => {
     const newUser = await new UserModel({ ...req.body, password: hashPassword });
     await newUser.save();
 
-    res.status(201).send({ ok: true, msg: "User Registration Successful" })
+    res.status(201).send({ ok: true, msg: "User Registration Successful"})
   } catch (error) {
     console.log('/user/register: ', err.message);
     res.status(501).send({ msg: "Internal Server error", error: error.message });
@@ -53,7 +53,7 @@ const login = async (req, res) => {
       }
     );
 
-    res.status(200).json({ ok: true, msg: "Login Successful", token });
+    res.status(200).json({ ok: true, msg: "Login Successful", token ,user:userExists });
   } catch (error) {
     console.log('/user/login: ', error.message);
     res.status(501).send({ msg: "Internal Server error", error: error.message });

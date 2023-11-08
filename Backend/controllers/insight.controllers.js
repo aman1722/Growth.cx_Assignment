@@ -11,17 +11,14 @@ async function getWordCountAndMediaFromURL(url) {
         const response = await axios.get(formattedURL);
         const html = response.data;
 
-        // Load HTML content into Cheerio
         const $ = cheerio.load(html);
 
-        // Extract text content for word count
         const text = $('body').text();
         
         const words = text.split(/\s+/).filter(word => word.length > 0);
-        // console.log(words);
+
         const wordCount = words.length;
 
-        // Extract media URLs and details
         const imageDetails = [];
         $('img').each((index, element) => {
             const imageURL = $(element).attr('src');
@@ -39,7 +36,7 @@ async function getWordCountAndMediaFromURL(url) {
             const anchorLink = $(element).attr('href');
             weblinksDetails.push(anchorLink);
         });
-        // Return word count and media details
+        
         return { wordCount, images: imageDetails, videos:videoDetails , weblinks : weblinksDetails };
     } catch (error) {
         console.error('Error fetching website content:', error);
