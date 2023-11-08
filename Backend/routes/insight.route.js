@@ -22,15 +22,6 @@ insightRouter.patch("/addtofav/:insightId",addToFav);
 insightRouter.delete("/delete/:insightId",deleteInsight)
 
 
-
-
-
-
-
-
-
-
-
 module.exports={
     insightRouter
 }
