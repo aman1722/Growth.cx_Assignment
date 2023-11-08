@@ -2,7 +2,7 @@ const BaseServerUrl = "http://localhost:8080";
 let showname = document.getElementById("showname")
 
 const data = JSON.parse(localStorage.getItem("user")) || null;
-// console.log(data);
+
 if (data) {
     showname.textContent = `Welcome! ${data.name}`
 }
@@ -75,7 +75,7 @@ favBtn.addEventListener("click", () => {
 
 
 function fetchData() {
-    fetch(`${BaseServerUrl}/insight/getallinsight`, {
+    fetch(`${BaseServerUrl}/insight/fav`, {
         method: "GET",
         headers: {
             "content-type": "application/json",
@@ -162,79 +162,6 @@ function renderData(data = []) {
 
 
 
-      let addToFav = document.createElement("td");
-      let addToFavBtn = document.createElement("button");
-      addToFavBtn.setAttribute("class","addtofav")
-      if(el.favorite===true){
-        addToFavBtn.innerText = "Remove Favorite";
-        addToFav.addEventListener("click",()=>{
-            fetch(`${BaseServerUrl}/insight/addtofav/${el._id}`,{
-                method:"PATCH",
-                headers:{
-                    "content-type": "application/json",
-                    "Authorization": `${token}`
-                },
-                body:JSON.stringify({
-                    favorite:false
-                })
-            })
-            .then(res=>res.json())
-            .then(data=>{
-                if(data.msg==="Details Updated"){
-                    Swal.fire(
-                        `Removed From Favorites`,
-                        '',
-                        'success'
-                    )
-                }else{
-                    Swal.fire({
-                        icon: "error",
-                        title: "Oops...",
-                        text: `Unable to remove from Favorites`
-                    });  
-                }
-                fetchData();
-            })
-          })
-      }else{
-        addToFavBtn.innerText = "Add To Favorites";
-        addToFav.addEventListener("click",()=>{
-            fetch(`${BaseServerUrl}/insight/addtofav/${el._id}`,{
-                method:"PATCH",
-                headers:{
-                    "content-type": "application/json",
-                    "Authorization": `${token}`
-                },
-                body:JSON.stringify({
-                    favorite:true
-                })
-            })
-            .then(res=>res.json())
-            .then(data=>{
-                if(data.msg==="Details Updated"){
-                    Swal.fire(
-                        `Added To Favorites`,
-                        '',
-                        'success'
-                    )
-                }else{
-                    Swal.fire({
-                        icon: "error",
-                        title: "Oops...",
-                        text: `Unable to add In Favorites`
-                    });  
-                }
-                fetchData();
-            })
-          })
-      }
-      
-
-     
-      addToFav.append(addToFavBtn);
-
-
-
       let deletetd = document.createElement("td");
       let deleteBtn = document.createElement("button");
       deleteBtn.setAttribute("class","delete")
@@ -267,7 +194,7 @@ function renderData(data = []) {
       })
       deletetd.append(deleteBtn);
 
-      tableRow.append(tableHead,wordCount,favorite,weblinks,imagelinks,videolinks,addToFav,deletetd);
+      tableRow.append(tableHead,wordCount,favorite,weblinks,imagelinks,videolinks,deletetd);
 
       mainContainer.append(tableRow);
 

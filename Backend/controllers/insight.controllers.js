@@ -92,9 +92,9 @@ const getAllFav = async(req,res)=>{
 const addToFav = async(req,res)=>{
     try {
         const { insightId } = req.params;
-        const payload = {favorite:true}
+        const payload = req.body;
         await InsightModel.findByIdAndUpdate({ _id: insightId }, payload);
-        res.status(200).send({msg:"Added to favorite!"})
+        res.status(200).send({msg:"Details Updated"})
     } catch (error) {
         console.log('/insight/addtofav/:insightId: ', error.message);
         res.status(501).send({ msg: "Internal Server error", error: error.message });
