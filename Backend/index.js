@@ -5,6 +5,8 @@ const cors = require("cors");
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUI = require('swagger-ui-express');
 const { userRouter } = require("./routes/user.route");
+const { authMiddleware } = require("./middlewares/auth.middleware");
+const { insightRouter } = require("./routes/insight.route");
 
 
 
@@ -46,6 +48,7 @@ app.get("/",async(req,res)=>{
 
 
 app.use("/user",userRouter);
+app.use("/insight",authMiddleware,insightRouter)
 
 
 
