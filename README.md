@@ -6,19 +6,19 @@ This URL Insight Tracker based web application is designed to extract and store 
 ## Deployed Link Frontend
 
 ```bash
-   
+   https://growthcx-word-count.netlify.app/
 ```
 
 ## Deployed Link Backend
 
 ```bash
-   
+   https://nice-gold-python-cap.cyclic.app/
 ```
 
 ## API Documentation Swagger
 
 ```bash
- 
+   https://nice-gold-python-cap.cyclic.app/api-docs/
 ```
 
 ## Key Features
@@ -183,6 +183,9 @@ We maintain a clean and organized folder structure for easy navigation and devel
 
 
 ### Favorites Page
+
+
+### Alert Message
 
 
 ## Swagger Docs SnapShots

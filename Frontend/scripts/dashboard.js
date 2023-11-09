@@ -1,4 +1,4 @@
-const BaseServerUrl = "http://localhost:8080";
+const BaseServerUrl = "https://nice-gold-python-cap.cyclic.app";
 let showname = document.getElementById("showname")
 
 const data = JSON.parse(localStorage.getItem("user")) || null;

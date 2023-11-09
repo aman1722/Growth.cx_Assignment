@@ -27,7 +27,7 @@ const options = {
         },
         servers: [
             {
-                url: "http://localhost:8080/",
+                url: "https://nice-gold-python-cap.cyclic.app/",
             },
         ],
     },

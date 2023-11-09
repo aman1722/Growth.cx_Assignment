@@ -16,7 +16,7 @@ function toggleSignup(){
      document.getElementById("login-form").style.display="block";
  }
 
- const BaseServerUrl = "http://localhost:8080";
+ const BaseServerUrl = "https://nice-gold-python-cap.cyclic.app";
 
 
  const loginBtn = document.getElementById("lgbtn");
