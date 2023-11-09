@@ -23,12 +23,12 @@ This URL Insight Tracker based web application is designed to extract and store 
 
 ## Key Features
 
-- **High Performance**: ensures that the Tracking site can handle high traffic loads efficiently.
+- **High Performance**: ensures that the tracking site can handle high traffic loads efficiently.
 - **Scalability**: easily adapt to increased user demand by adding more servers or resources as needed.
 - **API Development**: building APIs, to interact with frontend interfaces, mobile apps, and third-party services.
 - **Database Integration**: can integrate with MongoDB, offering flexibility in choosing the right database solution.
 - **Security**: protects sensitive customer information, such as encryption and authentication mechanisms.
-- **User Authentication and Authorization**: implement user accounts for features like saving preferences, accessing history across devices, and maintaining personalized settings.
+- **User Authentication**: implement user accounts for features like saving preferences, accessing history across devices, and maintaining personalized settings.
 - **URL Analysis**: Retrieve and store word count and media details from user-supplied URLs.
 - **Insight Storage**: Save insights in a database for future reference and analysis.
 - **User-Specific Insights**: Fetch all insights associated with a specific user.
@@ -37,7 +37,7 @@ This URL Insight Tracker based web application is designed to extract and store 
 
 ## Tech Stack
 
-- Frontend: HTML, CSS, JavaScript
+- Frontend: HTML, CSS, JavaScript, Bootstrap
 - Backend: Node.js, Express.js, MongoDB
 
 
