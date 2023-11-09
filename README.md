@@ -30,6 +30,11 @@ This URL Insight Tracker based web application is designed to extract and store 
 - **Security**: protect sensitive customer information, such as encryption, authentication, and authorization mechanisms.
 - **Inventory Management**: efficiently manage book inventory, borrowing processing, and retuen processing.
 - **User Authentication and Authorization**: ensures that only authorized users can access certain parts of the website.
+- **URL Analysis**: Retrieve and store word count and media details from user-supplied URLs.
+- **Insight Storage**: Save insights in a database for future reference and analysis.
+- **User-Specific Insights**: Fetch all insights associated with a specific user.
+- **Favorite Status Filtering**: Optional filtering to view insights based on favorite status.
+
 
 ## Tech Stack
 
