@@ -111,7 +111,7 @@ password: `chunnu`
 
 ## Endpoints Reference
 
-For detailed information on how to use our API, please refer to the [API documentation](docs/ApiDocs.md).
+For detailed information on how to use our API, please refer to the [API documentation](Backend/docs/ApiDocs.md).
 
 
 ## Welcome Route
@@ -160,12 +160,12 @@ app.get("/",async(req,res)=>{
 
 ## Database Schema
 
-![Alt text](docs/EntityRelationshipDiagram.png)
+![Alt text](Backend/docs/EntityRelationshipDigram.png)
 
 
 ## Folder Structure
 
-We maintain a clean and organized folder structure for easy navigation and development. Get familiar with it in the [Folder Structure](docs/FolderStructure.md) document.
+We maintain a clean and organized folder structure for easy navigation and development. Get familiar with it in the [Folder Structure](Backend/docs/FolderStructure.md) document.
 
 
 ## Frotend SnapShots
