@@ -69,7 +69,10 @@ const addInsighttoDb = async(req,res)=>{
 
 const getAllInsight = async(req,res)=>{
     try {
-        const allInsight = await InsightModel.find({user:req.body.userId}).sort({ createdAt: -1 });
+        const { favorite } = req.query;
+        const filter = favorite === "true" ? { favorite: true } : favorite === "false" ? { favorite: false } : {};
+
+        const allInsight = await InsightModel.find({user:req.body.userId,...filter}).sort({ createdAt: -1 });
 
         res.status(200).send(allInsight)
     } catch (error) {
@@ -78,16 +81,6 @@ const getAllInsight = async(req,res)=>{
     }
 }
 
-const getAllFav = async(req,res)=>{
-    try {
-        const allInsight = await InsightModel.find({favorite:true,user:req.body.userId}).sort({ updatedAt: -1 });
-
-        res.status(200).send(allInsight)
-    } catch (error) {
-        console.log('/insight/fav: ', error.message);
-        res.status(501).send({ msg: "Internal Server error", error: error.message });
-    }
-}
 
 const addToFav = async(req,res)=>{
     try {
@@ -114,7 +107,6 @@ const deleteInsight = async(req,res)=>{
 module.exports={
     addInsighttoDb,
     getAllInsight,
-    getAllFav,
     addToFav,
     deleteInsight
 }

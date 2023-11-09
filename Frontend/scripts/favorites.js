@@ -75,7 +75,7 @@ favBtn.addEventListener("click", () => {
 
 
 function fetchData() {
-    fetch(`${BaseServerUrl}/insight/fav`, {
+    fetch(`${BaseServerUrl}/insight/getallinsight?favorite=true`, {
         method: "GET",
         headers: {
             "content-type": "application/json",

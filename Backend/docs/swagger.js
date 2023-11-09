@@ -418,13 +418,20 @@
  * paths:
  *   /insight/getallinsight:
  *     get:
- *       summary: Get all insights for a specific user
+ *       summary: Get all insights for a specific user with optional filtering by favorite status(if we not pass any query then we got all insights.).
  *       tags: [Insights]
  *       security:
  *         - BearerAuth: []
+ *       parameters:
+ *         - in: query
+ *           name: favorite
+ *           schema:
+ *             type: boolean
+ *           required: false
+ *           description: Filter insights by favorite status (true/false).
  *       responses:
  *         200:
- *           description: Returns all insights for the authenticated user.
+ *           description: Returns all insights for the authenticated user with optional filtering by favorite status.
  *           content:
  *             application/json:
  *               schema:
@@ -440,43 +447,13 @@
  *                 properties:
  *                   msg:
  *                     type: string
- *                 example:
- *                   msg: Internal Server error
- */
-
-
-
-
-/**
- * @swagger
- * paths:
- *   /insight/fav:
- *     get:
- *       summary: Get favorite insights for a specific user
- *       tags: [Insights]
- *       security:
- *         - BearerAuth: []
- *       responses:
- *         200:
- *           description: Returns all favorite insights for the authenticated user.
- *           content:
- *             application/json:
- *               schema:
- *                 type: array
- *                 items:
- *                   $ref: '#/components/schemas/Insight'
- *         501:
- *           description: Internal Server Error. Please contact the administrator.
- *           content:
- *             application/json:
- *               schema:
- *                 type: object
- *                 properties:
- *                   msg:
+ *                   error:
  *                     type: string
  *                 example:
  *                   msg: Internal Server error
  */
+
+
 
 
 
