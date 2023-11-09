@@ -122,9 +122,9 @@ For detailed information on how to use our API, please refer to the [API documen
 
 ## Swagger Docs
 
-| Route             | Endpoint      | Description                       | Features          |
-| ----------------- | ------------- | --------------------------------- | ----------------- |
-| Api Documentation | GET /api-docs | Provides a Documentation for API. | - Welcome message |
+| Route             | Endpoint      | Description                       | Features                |
+| ----------------- | ------------- | --------------------------------- | ----------------------- |
+| Api Documentation | GET /api-docs | Provides a Documentation for API. | - Swagger Documentation |
 
 ## Users
 

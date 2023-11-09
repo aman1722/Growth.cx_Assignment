@@ -1,3 +1,6 @@
+## MVC Structure
+
+```js
 ├── index.js
 ├── config
 |    └── db.js
@@ -23,3 +26,4 @@
 ├──package.json
 ├──package-lock.json
 ├──README.md
+```
