@@ -23,13 +23,12 @@ This URL Insight Tracker based web application is designed to extract and store 
 
 ## Key Features
 
-- **High Prformance**: insures that the Library Management site can handle high traffic loads efficiently.
+- **High Performance**: ensures that the Tracking site can handle high traffic loads efficiently.
 - **Scalability**: easily adapt to increased user demand by adding more servers or resources as needed.
-- **API Devlopment**: building APIs, to interact with frontend interfaces, mobile apps, and third-party services.
+- **API Development**: building APIs, to interact with frontend interfaces, mobile apps, and third-party services.
 - **Database Integration**: can integrate with MongoDB, offering flexibility in choosing the right database solution.
-- **Security**: protect sensitive customer information, such as encryption, authentication, and authorization mechanisms.
-- **Inventory Management**: efficiently manage book inventory, borrowing processing, and retuen processing.
-- **User Authentication and Authorization**: ensures that only authorized users can access certain parts of the website.
+- **Security**: protects sensitive customer information, such as encryption and authentication mechanisms.
+- **User Authentication and Authorization**: implement user accounts for features like saving preferences, accessing history across devices, and maintaining personalized settings.
 - **URL Analysis**: Retrieve and store word count and media details from user-supplied URLs.
 - **Insight Storage**: Save insights in a database for future reference and analysis.
 - **User-Specific Insights**: Fetch all insights associated with a specific user.
@@ -38,7 +37,7 @@ This URL Insight Tracker based web application is designed to extract and store 
 
 ## Tech Stack
 
-- Frotend: HTML, CSS, JavaScript
+- Frontend: HTML, CSS, JavaScript
 - Backend: Node.js, Express.js, MongoDB
 
 
@@ -129,7 +128,7 @@ For detailed information on how to use our API, please refer to the [API documen
 
 | Route             | Endpoint      | Description                       | Features                |
 | ----------------- | ------------- | --------------------------------- | ----------------------- |
-| Api Documentation | GET /api-docs | Provides a Documentation for API. | - Swagger Documentation |
+| API Documentation | GET /api-docs | Provides a Documentation for API. | - Swagger Documentation |
 
 ## Users
 
@@ -173,7 +172,7 @@ app.get("/",async(req,res)=>{
 We maintain a clean and organized folder structure for easy navigation and development. Get familiar with it in the [Folder Structure](Backend/docs/FolderStructure.md) document.
 
 
-## Frotend SnapShots
+## Frontend SnapShots
 
 ### Home Page
 ![image](https://github.com/aman1722/Growth.cx_Assignment/assets/112754413/391f4278-294d-4c58-92b7-07f54e49808d)
@@ -192,6 +191,7 @@ We maintain a clean and organized folder structure for easy navigation and devel
 
 ### Alert Message
  ![image](https://github.com/aman1722/Growth.cx_Assignment/assets/112754413/7360f558-fd0a-41fd-b276-8c09ec226e90)
+
 
 ## Swagger Docs SnapShots
 
