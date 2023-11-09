@@ -27,7 +27,7 @@ const options = {
         },
         servers: [
             {
-                url: "https://nice-gold-python-cap.cyclic.app/",
+                url: "https://growthcx-word-count-app.onrender.com/",
             },
         ],
     },
