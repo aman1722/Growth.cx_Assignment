@@ -1,4 +1,4 @@
-const BaseServerUrl = "https://nice-gold-python-cap.cyclic.app";
+const BaseServerUrl = "https://growthcx-word-count-app.onrender.com";
 let showname = document.getElementById("showname")
 
 const data = JSON.parse(localStorage.getItem("user")) || null;

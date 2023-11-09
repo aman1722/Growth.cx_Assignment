@@ -16,7 +16,7 @@ function toggleSignup(){
      document.getElementById("login-form").style.display="block";
  }
 
- const BaseServerUrl = "https://nice-gold-python-cap.cyclic.app";
+ const BaseServerUrl = "https://growthcx-word-count-app.onrender.com";
 
 
  const loginBtn = document.getElementById("lgbtn");

@@ -12,13 +12,13 @@ This URL Insight Tracker based web application is designed to extract and store 
 ## Deployed Link Backend
 
 ```bash
-   https://nice-gold-python-cap.cyclic.app/
+   https://growthcx-word-count-app.onrender.com/
 ```
 
 ## API Documentation Swagger
 
 ```bash
-   https://nice-gold-python-cap.cyclic.app/api-docs/
+   https://growthcx-word-count-app.onrender.com/api-docs/
 ```
 
 ## Key Features
